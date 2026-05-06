@@ -45,4 +45,26 @@ switch(myDay){
 
 console.log(coffee);
 
-alert (today);
+//alert (coffeeTemplate(coffee));
+
+//Adds coffee to page
+document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
+
+//Change background color of HTML element
+document.querySelector("html").style.backgroundColor = coffee.color;
+
+
+
+function coffeeTemplate(coffee){
+    let myReturn = "";
+
+    myReturn += `
+        <p>
+           <img src="images/${coffee.pic}" alt="${coffee.alt}" id="coffee">
+           <strong>${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong> ${coffee.name}</strong>${coffee.desc}
+        </p>
+
+    `;
+
+    return myReturn;
+}
