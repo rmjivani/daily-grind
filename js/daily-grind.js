@@ -15,10 +15,10 @@
 */
 
 
-
 let myDate = new Date();
 let myDay = myDate.getDay();
 let today = "";
+let coffee = {};
 
 //use location object to access querystring (address bar)
 const queryString = window.location.search;
@@ -45,6 +45,26 @@ switch(myDay){
 
  	case 0:
     	today =  "Sunday";
+        coffee = {
+            name: "Cold Brew", 
+            pic: "cold-brew.jpg",
+            alt: "A refreshing cold brew coffee over ice.",
+            color: "saddlebrown",
+            day: "Sunday",
+            desc: 'Cold Brew! Perfect for a relaxed weekend reset.'
+        };
+ 	break;
+
+ 	case 1:
+    	today =  "Monday";
+        coffee = {
+            name: "Pumpkin Spice Latte", 
+            pic: "pumpkin-spice-latte.jpg",
+            alt: "A warm pumpkin spice latte with foam.",
+            color: "chocolate",
+            day: "Monday",
+            desc: 'Bring cozy fall flavor to the start of the week.'
+        };
  	break;
 
  	case 2:
@@ -56,6 +76,30 @@ switch(myDay){
             color: "pink",
             day: "Tuesday",
             desc: 'I like me some Bubble Tea!'
+        };
+ 	break;
+
+ 	case 3:
+    	today =  "Wednesday";
+        coffee = {
+            name: "Mocha", 
+            pic: "mocha.jpg",
+            alt: "A rich mocha coffee drink.",
+            color: "peru",
+            day: "Wednesday",
+            desc: 'Espressor blend with chocolate!'
+        };
+ 	break;
+
+ 	case 4:
+    	today =  "Thursday";
+        coffee = {
+            name: "Caramel Latte", 
+            pic: "caramel-latte.jpg",
+            alt: "Latte art.",
+            color: "sandybrown",
+            day: "Thursday",
+            desc: 'Creamy, sweet, caramel-forward.'
         };
  	break;
 
@@ -71,11 +115,24 @@ switch(myDay){
         };
  	break;
 
+ 	case 6:
+    	today =  "Saturday";
+        coffee = {
+            name: "Frappuccino", 
+            pic: "frappaccino.jpg",
+            alt: "A blended frappuccino with whipped cream.",
+            color: "tan",
+            day: "Saturday",
+            desc: 'A sweet blended treat for the weekend.'
+        };
+ 	break;
+
  	default:
     	today = "Something went wrong!";
 
 }
 
+console.log(today);
 console.log(coffee);
 
 //alert (coffeeTemplate(coffee));
